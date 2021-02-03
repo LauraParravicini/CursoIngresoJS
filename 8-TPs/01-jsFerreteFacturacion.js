@@ -25,6 +25,6 @@ function PrecioFinal ()
     let segundo_precio = parseInt(document.getElementById("txtIdPrecioDos").value);
     let tercer_precio = parseInt(document.getElementById("txtIdPrecioTres").value);
     let total = (primer_precio + segundo_precio + tercer_precio);
-    total += (total * 21)/100;
+    total += total * 21 /100;
     alert("El promedio es: " + total);
 }
