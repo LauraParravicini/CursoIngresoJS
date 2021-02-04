@@ -1,6 +1,6 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
-
+	if(document.getElementById("txtIdEdad").value == "15"){
+		alert("niña");
+	}
 }//FIN DE LA FUNCIÓN

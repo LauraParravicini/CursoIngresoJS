@@ -1,7 +1,7 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
-	
+	if(document.getElementById("txtIdEdad").value == "18"){
+		alert("info");
+	}
 
 }//FIN DE LA FUNCIÓN
