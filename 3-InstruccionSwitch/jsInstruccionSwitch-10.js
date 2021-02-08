@@ -27,7 +27,7 @@ function mostrar()
 			}
 		break;
 		case "Otoño":
-			alert("Se viaja a todos lados");
+			alert("Se viaja");
 		break;
 		case "Primavera":
 			if(destino != "Bariloche"){
