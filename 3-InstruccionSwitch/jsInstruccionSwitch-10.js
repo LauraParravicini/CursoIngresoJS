@@ -1,6 +1,41 @@
 function mostrar()
 {
-	var estacionIngresada =txtIdEstacion.value;
-	alert(estacionIngresada);
+	/*
+	en Invierno:
+				 	Solo Bariloche informa "se viaja" los demas destinos "No se viaja"
+				</br></br> en Verano:
+				 	Se viaja a Mar del plata y Cataratas solamente
+				</br></br> en Otoño:
+				 	Se viaja a todos los destinos.
+				</br></br> primavera:
+				 	solo no se viaja a Bariloche */
+	let estacion = document.getElementById("txtIdEstacion").value;
+	let destino = document.getElementById("txtIdDestino").value;
+	switch(estacion){
+		case "Invierno":
+			if(destino == "Bariloche"){
+				alert("Se viaja");
+			}else{
+				alert("No se viaja");
+			}
+		break;
+		case "Verano":
+			if(destino == "Cataratas" || destino == "Mar del plata"){
+				alert("Se viaja");
+			}else{
+				alert("No se viaja");
+			}
+		break;
+		case "Otoño":
+			alert("Se viaja a todos lados");
+		break;
+		case "Primavera":
+			if(destino != "Bariloche"){
+				alert("Se viaja");
+			}else{
+				alert("No se viaja");
+			}
+		break;
+	}
 
 }//FIN DE LA FUNCIÓN
