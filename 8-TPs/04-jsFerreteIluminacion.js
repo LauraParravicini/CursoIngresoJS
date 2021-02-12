@@ -10,5 +10,47 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    let cantLamp = parseInt(document.getElementById("txtIdCantidad").value);
+    let marca = document.getElementById("Marca").value;
+    let total, impuesto;
+    let precioUnidad = 35;
+    switch(cantLamp){   
+        case 3:
+            if(marca == "ArgentinaLuz"){
+                precioUnidad -= precioUnidad * 15/100;
+            }else if(marca == "FelipeLamparas"){
+                precioUnidad -= precioUnidad * 10/100;
+            }else{
+                precioUnidad -= precioUnidad * 5/100;
+            }        
+        break;
+        case 4:
+            if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                precioUnidad -= precioUnidad * 25/100;
+            }else{
+                precioUnidad -= precioUnidad * 20/100;
+            }
+        break;
+        case 5:
+            if(marca == "ArgentinaLuz"){
+                precioUnidad -= precioUnidad * 40/100;
+            }else{
+                precioUnidad -= precioUnidad * 30/100;   
+            }
+        break;
+        default: 
+            if(cantLamp >= 6){
+                precioUnidad -= precioUnidad * 50/100;  
+            }
+        break;
+    }
+    
+    total = cantLamp * precioUnidad;
+    
+    if(total > 120){
+        impuesto = total *10/100;
+        alert("Usted pago de ISSB" + impuesto);
+        total += impuesto;
+    }
+    document.getElementById("txtIdprecioDescuento").value = total;
 }
